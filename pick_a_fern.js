@@ -16,8 +16,8 @@ function fernDisplay() {
   elDiv.style.border = 'none';
   elDiv.style.marginLeft = '30px';
   elDiv.style.marginTop = '50px';
-  elDiv.style.transform = 'scale(1.5)';
-  elDiv.style.transition = 'transform 2s';
+  elDiv.style.transform = 'scale(1.6)';
+  elDiv.style.transition = 'transform 50s';
   this.style.border = '3px solid #415914';
   var elTree = document.getElementById('tree');
   elTree.style.display = 'none';
@@ -34,6 +34,11 @@ function treeClick() {
   elHeading.style.color = 'white';
 }
 
+function playMusic() {
+  var elTrack = document.getElementById('fern_music');
+  elTrack.play();
+}
+
 var elTree = document.getElementById('tree');
 elTree.addEventListener('click', treeClick, false);
 
@@ -42,6 +47,7 @@ for (i = 0; i < elImages.length; i++) {
   elImages[i].addEventListener('click', changeHeading, false);
   elImages[i].addEventListener('click', fernDisplay, false);
   elImages[i].addEventListener('click', displayStars, false);
+  elImages[i].addEventListener('click', playMusic, false);
 }
 
 
